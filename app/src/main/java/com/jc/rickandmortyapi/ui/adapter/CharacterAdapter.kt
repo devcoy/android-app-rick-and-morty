@@ -7,7 +7,7 @@ import com.jc.rickandmortyapi.R
 import com.jc.rickandmortyapi.domain.model.Character
 
 class CharacterAdapter(
-    val characters: List<Character>
+    private val characters: List<Character>
 ) : RecyclerView.Adapter<CharacterViewHolder>() {
 
     override fun getItemCount(): Int = characters.size

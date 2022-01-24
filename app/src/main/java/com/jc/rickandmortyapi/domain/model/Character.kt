@@ -10,5 +10,7 @@ data class Character(
     @SerializedName("status")
     val status: String,
     @SerializedName("species")
-    val specie: String
+    val specie: String,
+    @SerializedName("image")
+    val photo: String
 )
