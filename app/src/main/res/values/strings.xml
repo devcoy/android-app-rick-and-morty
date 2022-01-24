@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rick And Morty API</string>
+    <string name="app_title">Rick And Morty API</string>
 </resources>
