@@ -13,7 +13,7 @@
 
         <!-- Photo-->
         <ImageView
-            android:id="@+id/characterPhoto"
+            android:id="@+id/ivPhoto"
             android:layout_width="@dimen/width_img_home"
             android:layout_height="@dimen/height_imh_home"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,9 +25,9 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:padding="@dimen/common_space_default"
-            app:layout_constraintStart_toEndOf="@id/characterPhoto"
+            app:layout_constraintStart_toEndOf="@id/ivPhoto"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/characterPhoto"
+            app:layout_constraintTop_toTopOf="@id/ivPhoto"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <!-- Name -->
@@ -35,11 +35,15 @@
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Rick Sanchez"
+                tools:text="Zarbadar's Mytholog"
+                android:textAlignment="center"
                 android:textSize="@dimen/title_3"
                 android:textStyle="bold"
+                android:paddingBottom="@dimen/common_space_default"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
+            <!-- Status -->
             <TextView
                 android:id="@+id/tvStatus"
                 android:layout_width="wrap_content"
@@ -47,6 +51,8 @@
                 tools:text="Alive"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvName"/>
+
+            <!-- Specie -->
             <TextView
                 android:id="@+id/tvSpecie"
                 android:layout_width="wrap_content"
@@ -56,8 +62,6 @@
                 app:layout_constraintTop_toBottomOf="@id/tvStatus"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
