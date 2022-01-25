@@ -1,8 +1,8 @@
-package com.jc.rickandmortyapi.domain.model
+package com.jc.rickandmortyapi.dataAccess.network.character.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Character(
+data class CharacterNetworkModel(
     @SerializedName("id")
     val id: String,
     @SerializedName("name")

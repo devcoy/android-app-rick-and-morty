@@ -4,10 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jc.rickandmortyapi.R
-import com.jc.rickandmortyapi.domain.model.Character
+import com.jc.rickandmortyapi.dataAccess.network.character.model.CharacterNetworkModel
+import com.jc.rickandmortyapi.domain.character.CharacterDto
 
 class CharacterAdapter(
-    private val characters: List<Character>
+    private val characters: List<CharacterDto>
 ) : RecyclerView.Adapter<CharacterViewHolder>() {
 
     override fun getItemCount(): Int = characters.size
