@@ -10,7 +10,7 @@ class CharacterViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val binding = ItemCharacterBinding.bind(view)
 
-    fun render(character: CharacterDto) {
+    fun render(character: CharacterDto, onClickListener: (CharacterDto) -> Unit) {
         binding.tvName.text = character.name
         binding.tvStatus.text = character.status
         binding.tvSpecies.text = character.species
@@ -18,5 +18,9 @@ class CharacterViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             .with(binding.ivPhoto.context)
             .load(character.photo)
             .into(binding.ivPhoto)
+
+        itemView.setOnClickListener {
+            onClickListener(character)
+        }
     }
 }

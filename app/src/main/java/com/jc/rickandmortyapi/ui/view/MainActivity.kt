@@ -1,8 +1,10 @@
 package com.jc.rickandmortyapi.ui.view
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,7 +36,18 @@ class MainActivity : AppCompatActivity() {
         characterVM.onCreate()
 
         characterVM.characterMLD.observe(this, Observer {
-            binding.rvCharacter.adapter = CharacterAdapter(it as List<CharacterDto>)
+            binding.rvCharacter.adapter = CharacterAdapter(it as List<CharacterDto>) { character ->
+                onItemSelected(character)
+            }
         })
+    }
+
+    /**
+     * Lambda function
+     */
+    private fun onItemSelected(character: CharacterDto) {
+        Toast.makeText(this, character.name, Toast.LENGTH_SHORT).show()
+        Log.i("Character", "$character")
+
     }
 }
