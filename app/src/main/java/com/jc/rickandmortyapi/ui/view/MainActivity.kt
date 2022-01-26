@@ -1,14 +1,12 @@
 package com.jc.rickandmortyapi.ui.view
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.jc.rickandmortyapi.dataAccess.network.character.model.CharacterModel
+import com.jc.rickandmortyapi.ui.fragment.CharacterDetailsFragment
+import com.jc.rickandmortyapi.R
 import com.jc.rickandmortyapi.databinding.ActivityMainBinding
 import com.jc.rickandmortyapi.domain.character.dto.CharacterDto
 import com.jc.rickandmortyapi.ui.adapter.CharacterAdapter
@@ -37,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         characterVM.characterMLD.observe(this, Observer {
             binding.rvCharacter.adapter = CharacterAdapter(it as List<CharacterDto>) { character ->
-                onItemSelected(character)
+                onCharacterSelected(character)
             }
         })
     }
@@ -45,9 +43,18 @@ class MainActivity : AppCompatActivity() {
     /**
      * Lambda function
      */
-    private fun onItemSelected(character: CharacterDto) {
-        Toast.makeText(this, character.name, Toast.LENGTH_SHORT).show()
-        Log.i("Character", "$character")
+    private fun onCharacterSelected(character: CharacterDto) {
+        //Toast.makeText(this, character.name, Toast.LENGTH_SHORT).show()
+        //Log.i("Character", "$character")
+        characterVM.setCharacterSelected(character)
+
+        val fragment = CharacterDetailsFragment()
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+
+        fragmentTransaction.add(R.id.viewContainer, fragment)
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
 
     }
 }
