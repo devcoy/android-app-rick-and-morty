@@ -20,8 +20,8 @@ data class CharacterDto(
 )
 
 fun CharacterModel.toDomain() = CharacterDto(
-    name,
     id,
+    name,
     status,
     species,
     type,

@@ -10,21 +10,20 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class CharacterViewModel @Inject constructor(private val getAllCharacterUseCase: GetAllCharacterUseCase) :
+class CharacterViewModel @Inject constructor(
+    private val getAllCharacterUseCase: GetAllCharacterUseCase
+) :
     ViewModel() {
+    val TAG = "CharacterViewModel"
 
-    private val TAG = "CharacterViewModel"
     val characterMLD = MutableLiveData<Any>()
 
     fun onCreate() {
+        Log.i(TAG, "onCreate")
         viewModelScope.launch {
-            val characters = getAllCharacterUseCase().characters
-            Log.i(TAG, "$characters")
+            val characters = getAllCharacterUseCase()
 
-            //characterMLD.postValue(characters)
-            if (!characters.isNullOrEmpty()) {
-                characterMLD.postValue(characters)
-            }
+            characterMLD.postValue(characters)
         }
     }
 
