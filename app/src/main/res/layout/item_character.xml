@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:background="@android:color/darker_gray"/>
 
-        <!-- Info -->
+        <!-- InfoApiResponse -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -54,7 +54,7 @@
 
             <!-- Specie -->
             <TextView
-                android:id="@+id/tvSpecie"
+                android:id="@+id/tvSpecies"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="Human"

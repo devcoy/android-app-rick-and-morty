@@ -1,17 +1,52 @@
 package com.jc.rickandmortyapi.dataAccess.dummy
 
-import com.jc.rickandmortyapi.dataAccess.network.character.model.CharacterNetworkModel
 
 class CharacterProvider {
 
-    companion object {
-        val characters = listOf<CharacterNetworkModel>(
-            CharacterNetworkModel("1", "Courier Flap", "Alive", "Alien", "https://rickandmortyapi.com/api/character/avatar/75.jpeg"),
-            CharacterNetworkModel("2", "Gonorrhea", "Dead", "Disease", "https://rickandmortyapi.com/api/character/avatar/75.jpeg"),
-            CharacterNetworkModel("3", "Hammerhead Morty", "Unknown", "Humanoid", "https://rickandmortyapi.com/api/character/avatar/75.jpeg"),
-            CharacterNetworkModel("4", "Zarbadar's Mytholog", "Unknown", "Mythological Creature", "https://rickandmortyapi.com/api/character/avatar/75.jpeg"),
-            CharacterNetworkModel("5", "Wicker Rick", "Dead", "Wicker Rick", "https://rickandmortyapi.com/api/character/avatar/75.jpeg"),
-            CharacterNetworkModel("6", "Plutonian Hostess", "Alive", "Alien", "https://rickandmortyapi.com/api/character/avatar/75.jpeg"),
+    /*companion object {
+        val characters = listOf<CharacMo>(
+            CharacterDto(
+                id = "1",
+                name = "Courier Flap",
+                status = "Alive",
+                species = "Alien",
+                photo = "https://rickandmortyapi.com/api/character/avatar/75.jpeg"
+            ),
+            CharacterDto(
+                id = "2",
+                name="Gonorrhea",
+                status = "Dead",
+                species = "Disease",
+                photo = "https://rickandmortyapi.com/api/character/avatar/75.jpeg"
+            ),
+            CharacterDto(
+                id = "3",
+                name = "Hammerhead Morty",
+                status = "Unknown",
+                species = "Humanoid",
+                photo = "https://rickandmortyapi.com/api/character/avatar/75.jpeg"
+            ),
+            CharacterDto(
+                id = "4",
+                name = "Zarbadar's Mytholog",
+                status = "Unknown",
+                species = "Mythological Creature",
+                photo = "https://rickandmortyapi.com/api/character/avatar/75.jpeg"
+            ),
+            CharacterDto(
+                id = "5",
+                name = "Wicker Rick",
+                status = "Dead",
+                species = "Wicker Rick",
+                photo = "https://rickandmortyapi.com/api/character/avatar/75.jpeg"
+            ),
+            CharacterDto(
+                id = "6",
+                name = "Plutonian Hostess",
+                status = "Alive",
+                species = "Alien",
+                photo = "https://rickandmortyapi.com/api/character/avatar/75.jpeg"
+            ),
         )
-    }
+    }*/
 }

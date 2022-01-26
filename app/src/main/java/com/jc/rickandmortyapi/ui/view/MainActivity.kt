@@ -2,10 +2,11 @@ package com.jc.rickandmortyapi.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.jc.rickandmortyapi.dataAccess.dummy.CharacterProvider
+import com.jc.rickandmortyapi.dataAccess.network.character.model.CharacterModel
 import com.jc.rickandmortyapi.databinding.ActivityMainBinding
 import com.jc.rickandmortyapi.ui.adapter.CharacterAdapter
 import com.jc.rickandmortyapi.ui.viewModel.CharacterViewModel
@@ -29,11 +30,11 @@ class MainActivity : AppCompatActivity() {
 
         val manager = LinearLayoutManager(this)
         binding.rvCharacter.layoutManager = manager
-
         characterVM.onCreate()
 
-        characterVM.characterMLD.observe(this, {
-            binding.rvCharacter.adapter = CharacterAdapter(it)
+        characterVM.characterMLD.observe(this, Observer {
+            binding.rvCharacter.adapter = CharacterAdapter(it as List<CharacterModel>)
+            Log.i("characterMLD", "$it")
         })
     }
 }
