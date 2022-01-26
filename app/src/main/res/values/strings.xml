@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Rick And Morty API</string>
     <string name="app_title">Rick And Morty API</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="character_details_name">ID:</string>
+    <string name="character_details_photo_desc">Photo</string>
+    <string name="character_details_label_status">Status</string>
+    <string name="character_details_label_species">Species</string>
+    <string name="character_details_label_type">Type</string>
+    <string name="character_details_label_gender">Gender</string>
+    <string name="character_details_label_origin">Origin</string>
+    <string name="character_details_label_location">Location</string>
+    <string name="character_details_label_created_at">Created at</string>
 </resources>

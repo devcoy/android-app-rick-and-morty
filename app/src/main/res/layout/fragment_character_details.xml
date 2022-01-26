@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context=".CharacterDetails">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/common_space_min">
+
+        <!-- Photo -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/common_space_min"
+            android:textSize="@dimen/title_1"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Toxic Rick" />
+
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/black"
+            android:contentDescription="@string/character_details_photo_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <!-- Id -->
+        <TextView
+            android:id="@+id/tvLabelId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_space_default"
+            android:paddingEnd="@dimen/common_space_min"
+            android:paddingBottom="@dimen/common_space_min"
+            android:text="@string/character_details_name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivPhoto"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvLabelId"
+            app:layout_constraintTop_toTopOf="@id/tvLabelId"
+            tools:text="1" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvLabelStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_space_default"
+            android:paddingEnd="@dimen/common_space_min"
+            android:paddingBottom="@dimen/common_space_min"
+            android:text="@string/character_details_label_status"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelId"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvLabelStatus"
+            app:layout_constraintTop_toTopOf="@id/tvLabelStatus"
+            tools:text="Alive" />
+
+        <!-- Species -->
+        <TextView
+            android:id="@+id/tvLabelSpecies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_space_default"
+            android:paddingEnd="@dimen/common_space_min"
+            android:paddingBottom="@dimen/common_space_min"
+            android:text="@string/character_details_label_species"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelStatus"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvSpecies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvLabelSpecies"
+            app:layout_constraintTop_toTopOf="@id/tvLabelSpecies"
+            tools:text="Human" />
+
+        <!-- Type -->
+        <TextView
+            android:id="@+id/tvLabelType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_space_default"
+            android:paddingEnd="@dimen/common_space_min"
+            android:paddingBottom="@dimen/common_space_min"
+            android:text="@string/character_details_label_type"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelSpecies"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvLabelType"
+            app:layout_constraintTop_toTopOf="@id/tvLabelType"
+            tools:text="Unknow" />
+
+        <!-- Gender -->
+        <TextView
+            android:id="@+id/tvLabelGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_space_default"
+            android:paddingEnd="@dimen/common_space_min"
+            android:paddingBottom="@dimen/common_space_min"
+            android:text="@string/character_details_label_gender"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelType"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvLabelGender"
+            app:layout_constraintTop_toTopOf="@id/tvLabelGender"
+            tools:text="Demale" />
+
+        <!-- Origin -->
+        <TextView
+            android:id="@+id/tvLabelOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_space_default"
+            android:paddingEnd="@dimen/common_space_min"
+            android:paddingBottom="@dimen/common_space_min"
+            android:text="@string/character_details_label_origin"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelGender"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvLabelOrigin"
+            app:layout_constraintTop_toTopOf="@id/tvLabelOrigin"
+            tools:text="Description" />
+
+        <!-- Location -->
+        <TextView
+            android:id="@+id/tvLabelLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_space_default"
+            android:paddingEnd="@dimen/common_space_min"
+            android:paddingBottom="@dimen/common_space_min"
+            android:text="@string/character_details_label_location"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelOrigin"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvLabelLocation"
+            app:layout_constraintTop_toTopOf="@id/tvLabelLocation"
+            tools:text="Description" />
+
+        <!-- Created at -->
+        <TextView
+            android:id="@+id/tvLabelCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_space_default"
+            android:paddingEnd="@dimen/common_space_min"
+            android:paddingBottom="@dimen/common_space_min"
+            android:text="@string/character_details_label_created_at"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelLocation"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvLabelCreated"
+            app:layout_constraintTop_toTopOf="@id/tvLabelCreated"
+            tools:text="Description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
